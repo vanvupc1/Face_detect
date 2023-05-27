@@ -11,13 +11,13 @@ from firebase_admin import storage
 import numpy as np
 from datetime import datetime
 
-# cred = credentials.Certipyficate("serviceAccountKey.json")
-# firebase_admin.initialize_app(cred, {
-#     'databaseURL': "",
-#     'storageBucket': ""
-# })
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL': "https://facedetect-60d54-default-rtdb.firebaseio.com",
+    'storageBucket': "facedetect-60d54.appspot.com"
+})
 
-# bucket = storage.bucket()
+bucket = storage.bucket()
 
 cap = cv2.VideoCapture(1)
 cap.set(3, 640)
